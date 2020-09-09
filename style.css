@@ -5,11 +5,12 @@ h1
 	font-size: 3em;
 }
 #contenedor{
-	margin-left: 50px;
+	margin-left: 20px;
+	padding: 5px;
 }
 .row
 {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 label
@@ -27,4 +28,12 @@ body
 	margin-right: 100px;
 	margin-left: 100px;
 	margin-bottom: 100px;
+}
+#margen
+{
+	text-align: center;
+	padding: 10px;
+	border: 5px solid;
+	width: 600px;
+	height: 300px;
 }
