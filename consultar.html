@@ -2,39 +2,51 @@
 <html>
 <head>
 	<title>Registrar</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>Cunsultar pulsaciones</h1>
-	<ul>
-			<li><a href="index.html">Inicio</a></li>
-			<li><a href="registrar.html">Registrar</a></li>
-	</ul>
+	
+	<div class="jumbotron text-center">
+  		<h1>Consultar Listado De Personas</h1>
+  		<p>Calcula tu pulsacion en tan solo unos minutos...!</p> 
+	</div>
 
-	<table style="width:100%">
-  	<tr>
-    	<th>Identificacion</th>
-    	<th>Nombre</th>
-    	<th>Sexo</th>
-    	<th>Edad</th>
-    	<th>Pulsaciones</th>
-  	</tr>
-  	<tr>
-    	<td>123</td>
-    	<td>Smith</td>
-    	<td>M</td>
-    	<td>23</td>
-    	<td>18,7</td>
-  	</tr>
-  	<tr>
-    	<td>456</td>
-    	<td>Jackson</td>
-    	<td>F</td>
-    	<td>19</td>
-    	<td>20,1</td>
- 	</tr>
-	</table>
+	
+	<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="index.html">Inicio</a>
+    		</div>
+    		<ul class="nav navbar-nav">
+      			<li class="active">
+      			<li><a href="registrar.html">Registrar</a></li>
+      			<li><a href="consultar.html">Consultar</a></li>
+    		</ul>
+  		</div>
+   	</nav>
 
-
+	<div class="container">
+  		<h2>Personas Registradas</h2>
+  		<p>Listado de las personas registradas, con su pulsacion...!</p>            
+  		<table class="table table-hover" id="tablaPersonas">
+    		<thead>
+    			<tr>
+    				<th>Identificacion</th>
+    				<th>Sexo</th>
+    				<th>Nombre</th>
+    				<th>Edad</th>
+    				<th>Pulsaciones</th>
+      			</tr>
+    		</thead>
+    		<tbody>
+     
+    		</tbody>
+  		</table>
+	</div>
+	<script type="text/javascript" src="scriptConsult.js"></script>
 </body>
 </html>

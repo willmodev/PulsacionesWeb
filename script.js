@@ -15,16 +15,16 @@ var resultado =  document.getElementById("resultado");
 
 var id =  document.getElementById("id_person");
 var firstName = document.getElementById("first_name");
-var sex = document.getElementById("sex");
+var sex = document.getElementById("sex")
 var age =  document.getElementById("age");
 
 
-btnCalculate.addEventListener("click",calculatePulsation);
+btnCalculate.addEventListener("click",getPersona);
 
-function calculatePulsation()
+function getPersona()
 {
 	const persona =  new Persona(id.value, firstName.value, sex.value, age.value);
-
+	
 	if (persona.sexo == 'F' ) {
 		persona.pulsacion = (220 - persona.edad) / 10;
 	}else
@@ -34,7 +34,23 @@ function calculatePulsation()
 
 
 	resultado.innerHTML = "Su pulsacion es: " + persona.pulsacion;
+	Guardar(persona);
+	
+}
 
+function Guardar(p)
+{
+	var persona = p;
+	var personas = [];
+
+	if(localStorage.getItem('BDLocal') != null)
+	{
+		personas = JSON.parse(localStorage.getItem('BDLocal'));
+	}
+	personas.push(persona);
+	localStorage.setItem('BDLocal', JSON.stringify(personas));
+
+	
 }
 
 
