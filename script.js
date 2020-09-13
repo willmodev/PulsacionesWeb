@@ -33,7 +33,7 @@ function getPersona()
 	}
 
 
-	resultado.innerHTML = "Su pulsacion es: " + persona.pulsacion;
+	resultado.innerHTML = '<strong>' + 'Su pulsacion es: '+ persona.pulsacion+'</strong>';
 	Guardar(persona);
 	
 }
